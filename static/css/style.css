@@ -1,0 +1,84 @@
+/* Основные стили */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+/* Стили для карточек товаров */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.price {
+    font-weight: bold;
+    color: #4CAF50;
+    font-size: 1.2rem;
+}
+
+/* Стили для корзины */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-total {
+    text-align: right;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+}
+
+.checkout-btn {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+    
+    nav {
+        margin-top: 1rem;
+    }
+}
