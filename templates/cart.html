@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Корзина{% endblock %}
+
+{% block content %}
+<div class="cart-container">
+    <h1>Корзина</h1>
+    <div class="cart-summary">
+        <p>2 товара на 5 120 ₽</p>
+    </div>
+
+    <div class="cart-items">
+        <div class="cart-item">
+            <h3>Аутиентни 500 мг/125 мг № 14 табл</h3>
+            <p class="price">2 920 ₽</p>
+            <button class="remove-btn">Удалить</button>
+        </div>
+        <div class="cart-item">
+            <h3>Пиковит 7+ Форте № 30 пастилки</h3>
+            <p class="price">2 200 ₽</p>
+            <button class="remove-btn">Удалить</button>
+        </div>
+    </div>
+
+    <div class="promo-code">
+        <h3>Введите промокод</h3>
+        <input type="text" placeholder="Промокод">
+        <button>Проверить</button>
+    </div>
+
+    <div class="cart-total">
+        <p>ИТОГО БЕЗ ДОСТАВКИ: 5 120 ₽</p>
+        <a href="{{ url_for('checkout') }}" class="checkout-btn">Перейти к оформлению</a>
+    </div>
+</div>
+{% endblock %}
